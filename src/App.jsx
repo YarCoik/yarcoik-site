@@ -37,8 +37,8 @@ function App() {
         </h1>
 
         <p className="text-lg md:text-xl text-zinc-400 mb-10 leading-relaxed max-w-lg mx-auto">
-          Я создаю цифровые продукты и веб-интерфейсы. <br/>
-          Прямо сейчас я обновляю свое портфолио.
+          Я создаю веб-интерфейсы. <br/>
+          Прямо сейчас я обновляю сайт.
         </p>
 
         {/* Кнопки соцсетей */}
@@ -56,12 +56,40 @@ function App() {
                className="p-3.5 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all text-zinc-400 hover:text-white">
               <Github size={22} />
             </a>
-            <a href="mailto:contact@yaroslav.dev" 
+            <a href="mailto:yarcoik@vk.com" 
                className="p-3.5 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all text-zinc-400 hover:text-white">
               <Mail size={22} />
             </a>
           </div>
 
+        </div>
+  {/* GAME OS BADGE */}
+        <div className="mt-12">
+          <a href="/games/" className="group relative inline-flex items-center gap-4 px-6 py-4 bg-[#0a0f14] border border-[#00f3ff]/30 rounded-2xl overflow-hidden transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(0,243,255,0.2)]">
+            
+            {/* Анимированный фон кнопки */}
+            <div className="absolute inset-0 bg-[linear-gradient(90deg,transparent,rgba(0,243,255,0.1),transparent)] -translate-x-full group-hover:animate-[shimmer_2s_infinite]"></div>
+            
+            {/* Иконка */}
+            <div className="relative z-10 w-12 h-12 flex items-center justify-center bg-[#00f3ff]/10 rounded-xl border border-[#00f3ff]/50 text-2xl">
+              🕹️
+            </div>
+            
+            {/* Текст */}
+            <div className="relative z-10 text-left">
+              <div className="text-[#00f3ff] font-mono font-bold text-lg tracking-wider" style={{ textShadow: "0 0 10px rgba(0,243,255,0.5)" }}>
+                CYBER OS
+              </div>
+              <div className="text-zinc-500 text-xs font-mono">
+                50 MINI GAMES LOADED
+              </div>
+            </div>
+
+            {/* Стрелочка */}
+            <div className="relative z-10 text-[#00f3ff] opacity-50 group-hover:opacity-100 group-hover:translate-x-1 transition-all">
+              →
+            </div>
+          </a>
         </div>
 
         {/* Футер */}
