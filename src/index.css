@@ -2,45 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 1. Делаем браузер темным на уровне ядра */
 :root {
   color-scheme: dark;
 }
 
-/* 1. Запрещаем скролл на html/body, чтобы не было двойных полос */
-html, body {
-  margin: 0;
-  padding: 0;
+/* 2. Базовые настройки */
+body {
   background-color: #000000;
   color: #ffffff;
-  height: 100%; /* Важно */
-  overflow: hidden; /* Убираем скролл с самого окна браузера */
+  margin: 0;
+  overflow-x: hidden; /* Убираем только горизонтальную прокрутку */
 }
 
-/* 2. Переносим скролл на корневой элемент React (#root) */
-#root {
-  height: 100%;
-  overflow-y: auto; /* Скроллится только этот контейнер */
-  overflow-x: hidden;
-}
+/* 3. СТИЛИЗАЦИЯ ГЛАВНОГО СКРОЛЛБАРА */
 
-/* 3. Стилизуем этот единственный скроллбар (чтобы был красивым, но родным) */
-#root {
+/* Firefox */
+html {
   scrollbar-width: thin;
   scrollbar-color: #27272a #000000;
 }
 
-/* Для Chrome/Edge */
-#root::-webkit-scrollbar {
-  width: 10px;
+/* Chrome, Edge, Safari, Opera */
+::-webkit-scrollbar {
+  width: 12px;
 }
-#root::-webkit-scrollbar-track {
-  background: #000000;
+
+::-webkit-scrollbar-track {
+  background: #000000; /* Черный фон дорожки */
 }
-#root::-webkit-scrollbar-thumb {
-  background-color: #27272a;
-  border-radius: 5px;
-  border: 2px solid #000000;
+
+::-webkit-scrollbar-thumb {
+  background-color: #27272a; /* Темно-серый ползунок */
+  border-radius: 6px;
+  border: 3px solid #000000; /* Отступ за счет рамки */
 }
-#root::-webkit-scrollbar-thumb:hover {
-  background-color: #3b82f6;
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #3b82f6; /* Синий при наведении */
 }
