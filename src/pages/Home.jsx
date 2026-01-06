@@ -1,9 +1,10 @@
 import React, { useState, useRef } from 'react';
+import { Link } from 'react-router-dom'; // <--- НЕ ЗАБУДЬ ЭТО ДЛЯ КНОПКИ
+// И ВОТ ЭТО ОБЯЗАТЕЛЬНО:
 import { 
   Github, Send, Mail, Code2, Terminal, ArrowRight, 
   Layers, Monitor, Music, Gamepad2, Star, Users 
 } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 /* --- ЭФФЕКТЫ --- */
 
@@ -60,7 +61,7 @@ const Particles = () => {
     )
 }
 
-function App() {
+function Home() {
   // Убрал useState(false), чтобы контент не скрывался при старте
   // Если нужна анимация появления, лучше использовать CSS animate-fade-in
 

@@ -1,7 +1,8 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-// 👇 ТЫ СКОРЕЕ ВСЕГО ЗАБЫЛ ВОТ ЭТИ ДВЕ СТРОЧКИ 👇
+// ВАЖНО: Точки и слэши имеют значение!
+// ./pages/Home означает: "Ищи папку pages рядом со мной, а в ней файл Home"
 import Home from './pages/Home';
 import Games from './pages/Games';
 
