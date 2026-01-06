@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import { 
   Github, Send, Mail, Code2, Terminal, ArrowRight, 
   Layers, Monitor, Music, Gamepad2, Star, Users 
@@ -60,14 +60,15 @@ const Particles = () => {
 }
 
 function App() {
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => { setMounted(true); }, []);
+  // Убрал useState(false), чтобы контент не скрывался при старте
+  // Если нужна анимация появления, лучше использовать CSS animate-fade-in
 
   return (
     <div className="relative min-h-screen bg-black text-white selection:bg-blue-500/30 overflow-x-hidden font-sans">
       
       {/* --- BACKGROUND --- */}
-      <div className="fixed inset-0 pointer-events-none">
+      {/* FIX: Добавил z-0, чтобы фон точно был сзади */}
+      <div className="fixed inset-0 pointer-events-none z-0">
         {/* Шум */}
         <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>
         {/* Градиенты */}
@@ -78,7 +79,8 @@ function App() {
         <Particles />
       </div>
 
-      <div className={`relative z-10 max-w-3xl mx-auto px-6 py-24 transition-all duration-1000 ease-out ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+      {/* FIX: Убрал условие mounted ? ... : ... Теперь opacity всегда 100 */}
+      <div className="relative z-10 max-w-3xl mx-auto px-6 py-24 transition-all duration-1000 ease-out opacity-100 translate-y-0">
         
         {/* --- HERO --- */}
         <div className="text-center mb-20">
