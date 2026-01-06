@@ -110,7 +110,7 @@ function App() {
              className="flex items-center gap-2 px-6 py-3 bg-zinc-900 border border-white/10 rounded-xl font-medium text-zinc-300 hover:text-white hover:border-white/30 transition-all active:scale-95">
             <Github size={18} /> GitHub
           </a>
-          <a href="mailto:contact@yaroslav.dev" 
+          <a href="mailto:yarcoik@vk.com" 
              className="flex items-center gap-2 px-6 py-3 bg-zinc-900 border border-white/10 rounded-xl font-medium text-zinc-300 hover:text-white hover:border-white/30 transition-all active:scale-95">
             <Mail size={18} /> Email
           </a>
@@ -122,7 +122,7 @@ function App() {
             <Code2 size={16}/> Featured Project
           </h2>
 
-          <a href="https://yarblox-site.vercel.app/" target="_blank" rel="noreferrer" className="block group">
+          <a href="https://yarblox.ru" target="_blank" rel="noreferrer" className="block group">
             <SpotlightCard className="bg-zinc-900/40 border border-white/10 rounded-3xl p-1 transition-all hover:border-blue-500/30 hover:shadow-2xl hover:shadow-blue-500/10">
               <div className="bg-zinc-950/80 rounded-[20px] p-8 backdrop-blur-sm relative z-10">
                  <div className="flex flex-col md:flex-row gap-8 items-start">
@@ -149,7 +149,7 @@ function App() {
 
                        <div className="mt-6 flex flex-wrap gap-3">
                           <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 border border-white/5 text-xs text-zinc-300">
-                             <Users size={12}/> 100+ Users
+                             <Users size={12}/> 1+ Users
                           </div>
                           <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 border border-white/5 text-xs text-zinc-300">
                              <Star size={12} className="text-yellow-500"/> 5.0 Rating
@@ -203,14 +203,14 @@ function App() {
             <Terminal size={12} />
             <span>System Online.</span>
           </div>
-          <p>© 2025 Yaroslav.</p>
+          <p>© 2026 Yaroslav.</p>
         </div>
 
       </div>
 
       {/* --- CYBER OS BUTTON (FIXED) --- */}
       <div className="fixed bottom-8 right-8 z-50">
-          <a href="/games/" className="group flex items-center gap-3 px-5 py-3 bg-[#0a0f14]/90 backdrop-blur-xl border border-[#00f3ff]/30 rounded-2xl hover:scale-105 hover:border-[#00f3ff] transition-all shadow-2xl hover:shadow-[0_0_30px_rgba(0,243,255,0.3)]">
+          <a href="/games" className="group flex items-center gap-3 px-5 py-3 bg-[#0a0f14]/90 backdrop-blur-xl border border-[#00f3ff]/30 rounded-2xl hover:scale-105 hover:border-[#00f3ff] transition-all shadow-2xl hover:shadow-[0_0_30px_rgba(0,243,255,0.3)]">
             <div className="relative">
                <Gamepad2 size={24} className="text-[#00f3ff] group-hover:animate-spin" />
                <span className="absolute top-0 right-0 w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
