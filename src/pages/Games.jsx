@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 function Games() {
   return (
     <div className="w-full h-screen bg-black">
-      <Link to="/" className="fixed top-4 left-4 z-50 text-white bg-black/50 px-4 py-2 rounded border border-white/20 hover:bg-white hover:text-black transition-colors">
-         ← Назад
+      <Link to="/" className="fixed top-0.1 left-0.1 z-50 text-white bg-black/0 px-1 py-1 rounded border border-white/0 hover:bg-white hover:text-black transition-colors">
+         ←
       </Link>
 
       <iframe
