@@ -5,6 +5,51 @@
     <link rel="icon" type="image/png" href="/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>YarCoik.Dev</title>
+    <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yaroslav Dev.</title>
+    
+    <!-- 🔥 ДОБАВЬ ЭТОТ БЛОК СТИЛЕЙ СЮДА 🔥 -->
+    <style>
+      /* Задаем черный фон сразу, чтобы не было белой вспышки */
+      body {
+        background-color: #000000;
+        margin: 0;
+      }
+
+      /* Скроллбар (Chrome, Edge, Safari) */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #050505; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #27272a; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #3b82f6; 
+      }
+
+      /* Firefox */
+      html {
+        scrollbar-width: thin;
+        scrollbar-color: #27272a #050505;
+      }
+    </style>
+    <!-- 🔥 КОНЕЦ БЛОКА 🔥 -->
+
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
   </head>
   <body>
     <div id="root"></div>
