@@ -5,14 +5,13 @@ import { Link } from 'react-router-dom';
 function Games() {
   return (
     <div className="w-full h-screen bg-black">
-      {/* Кнопка назад */}
-      <Link to="/" className="fixed top-1 left-1 z-50 text-white bg-black/0 px-0.2 py-0.2 rounded border border-black/0">
-         ←
+      <Link to="/" className="fixed top-4 left-4 z-50 text-white bg-black/50 px-4 py-2 rounded border border-white/20 hover:bg-white hover:text-black transition-colors">
+         ← Назад
       </Link>
 
-      {/* Вставка обычного HTML файла через iframe */}
-          <iframe
-            src={`/games/index.html?v=${Date.now()}`}
+      <iframe
+        // 👇 ИЗМЕНИЛ ПУТЬ ТУТ (было /games/..., стало /game-files/...)
+        src={`/game-files/index.html?v=${Date.now()}`}
         className="w-full h-full border-none"
         title="YarGame"
       />
