@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* 1. Сообщаем браузеру, что тема темная (убирает белые лаги) */
+/* 1. Глобальная настройка цвета (для Firefox и системных элементов) */
 :root {
   color-scheme: dark;
 }
@@ -10,40 +10,33 @@
 body {
   background-color: #000000;
   color: #ffffff;
-  overflow-x: hidden; /* Убираем горизонт. прокрутку */
+  overflow-x: hidden;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+/* 2. ЯДЕРНЫЙ ВАРИАНТ: Стилизуем скроллбар У ВСЕХ элементов сразу */
 
-/* === КАСТОМНЫЙ СКРОЛЛБАР (Работает везде) === */
-
-/* Для Firefox */
+/* Firefox */
 * {
-  scrollbar-width: thin; /* Тонкий */
-  scrollbar-color: #3f3f46 #000000; /* Ползунок и Фон */
+  scrollbar-width: thin;
+  scrollbar-color: #27272a #000000; /* Ползунок / Фон */
 }
 
-/* Для Chrome, Edge, Safari, Opera */
-::-webkit-scrollbar {
-  width: 10px; /* Ширина вертикального */
-  height: 10px; /* Высота горизонтального */
+/* Chrome, Edge, Safari, Opera */
+*::-webkit-scrollbar {
+  width: 12px; /* Чуть шире, чтобы было удобнее */
 }
 
-/* Фон (дорожка) */
-::-webkit-scrollbar-track {
-  background: #000000; 
+*::-webkit-scrollbar-track {
+  background: #000000; /* Черный фон дорожки */
 }
 
-/* Сам ползунок */
-::-webkit-scrollbar-thumb {
-  background-color: #27272a; /* Темно-серый */
-  border-radius: 9999px; /* Круглые края */
-  border: 2px solid #000000; /* Черная обводка создает эффект отступа */
+*::-webkit-scrollbar-thumb {
+  background-color: #27272a; /* Темно-серый ползунок */
+  border-radius: 6px;       /* Скругление */
+  border: 3px solid #000000; /* ВАЖНО: Делает "отступ" внутри, создавая эффект тонкого ползунка */
 }
 
-/* Ползунок при наведении (Синий неон) */
-::-webkit-scrollbar-thumb:hover {
+/* При наведении - синий */
+*::-webkit-scrollbar-thumb:hover {
   background-color: #3b82f6; 
 }
