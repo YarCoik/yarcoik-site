@@ -2,16 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Основные настройки страницы */
 body {
   background: #000;
   color: #fff;
-  /* БЫЛО: overflow: hidden; (это блокировало скролл) */
-  /* СТАЛО: только по горизонтали скрываем, по вертикали можно */
-  overflow-x: hidden; 
+  /* Важно: разрешаем скролл вниз, запрещаем вбок */
+  overflow-x: hidden;
   overflow-y: auto;
 }
 
-/* На всякий случай для плавности */
+/* Плавная прокрутка для всего сайта */
 html {
   scroll-behavior: smooth;
+}
+
+/* --- КИБЕР СКРОЛЛБАР (Chrome, Edge, Safari) --- */
+
+/* Ширина полосы */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Фон полосы (Трек) - делаем черным */
+::-webkit-scrollbar-track {
+  background: #050505; 
+}
+
+/* Ползунок (Thumb) - темно-серый по умолчанию */
+::-webkit-scrollbar-thumb {
+  background: #27272a; /* Zinc-800 */
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+/* Ползунок при наведении - загорается синим неоном */
+::-webkit-scrollbar-thumb:hover {
+  background: #3b82f6; /* Blue-500 */
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.7); /* Свечение */
+}
+
+/* --- Firefox (у них свои правила) --- */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #27272a #050505;
 }
