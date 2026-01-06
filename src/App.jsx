@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { 
   Github, Send, Mail, Code2, Terminal, ArrowRight, 
-  Layers, Cpu, Music, Gamepad2, Star, Users, ExternalLink
+  Layers, Monitor, Music, Gamepad2, Star, Users 
 } from 'lucide-react';
 
 /* --- ЭФФЕКТЫ --- */
@@ -177,18 +177,38 @@ function App() {
           </div>
         </div>
 
+        {/* --- MUSIC VIBE --- */}
+        <div className="mb-20 flex justify-center">
+           <div className="inline-flex items-center gap-4 px-6 py-4 bg-zinc-900/50 border border-white/10 rounded-2xl backdrop-blur-md">
+              <div className="w-10 h-10 bg-green-500/20 rounded-full flex items-center justify-center text-green-500">
+                <Music size={20} />
+              </div>
+              <div className="text-left">
+                <div className="text-xs text-zinc-500 font-bold uppercase tracking-wider mb-1">Coding Vibe</div>
+                <div className="flex items-center gap-2">
+                   <div className="flex gap-1 h-3 items-end">
+                      <span className="w-1 bg-green-500 animate-[pulse_1s_infinite] h-full"></span>
+                      <span className="w-1 bg-green-500 animate-[pulse_1.5s_infinite] h-2/3"></span>
+                      <span className="w-1 bg-green-500 animate-[pulse_0.8s_infinite] h-3/4"></span>
+                   </div>
+                   <span className="text-sm font-medium text-white">Lo-Fi / Phonk / Synthwave</span>
+                </div>
+              </div>
+           </div>
+        </div>
+
         {/* --- FOOTER --- */}
         <div className="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-zinc-600 font-mono">
           <div className="flex items-center gap-2">
             <Terminal size={12} />
             <span>System Online.</span>
           </div>
-          <p>© 2026 Yaroslav.</p>
+          <p>© 2025 Yaroslav.</p>
         </div>
 
       </div>
 
-      {/* --- CYBER OS BUTTON (КНОПКА К ТВОИМ ИГРАМ) --- */}
+      {/* --- CYBER OS BUTTON (FIXED) --- */}
       <div className="fixed bottom-8 right-8 z-50">
           <a href="/games/" className="group flex items-center gap-3 px-5 py-3 bg-[#0a0f14]/90 backdrop-blur-xl border border-[#00f3ff]/30 rounded-2xl hover:scale-105 hover:border-[#00f3ff] transition-all shadow-2xl hover:shadow-[0_0_30px_rgba(0,243,255,0.3)]">
             <div className="relative">
