@@ -2,41 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-/* 1. Глобальная настройка цвета (для Firefox и системных элементов) */
-:root {
-  color-scheme: dark;
-}
-
 body {
   background-color: #000000;
   color: #ffffff;
   overflow-x: hidden;
 }
 
-/* 2. ЯДЕРНЫЙ ВАРИАНТ: Стилизуем скроллбар У ВСЕХ элементов сразу */
-
-/* Firefox */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: #27272a #000000; /* Ползунок / Фон */
-}
-
-/* Chrome, Edge, Safari, Opera */
-*::-webkit-scrollbar {
-  width: 12px; /* Чуть шире, чтобы было удобнее */
-}
-
-*::-webkit-scrollbar-track {
-  background: #000000; /* Черный фон дорожки */
-}
-
-*::-webkit-scrollbar-thumb {
-  background-color: #27272a; /* Темно-серый ползунок */
-  border-radius: 6px;       /* Скругление */
-  border: 3px solid #000000; /* ВАЖНО: Делает "отступ" внутри, создавая эффект тонкого ползунка */
-}
-
-/* При наведении - синий */
-*::-webkit-scrollbar-thumb:hover {
-  background-color: #3b82f6; 
+html {
+  scroll-behavior: smooth;
 }
