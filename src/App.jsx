@@ -3,6 +3,7 @@ import {
   Github, Send, Mail, Code2, Terminal, ArrowRight, 
   Layers, Monitor, Music, Gamepad2, Star, Users 
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 /* --- ЭФФЕКТЫ --- */
 
@@ -211,8 +212,8 @@ function App() {
       </div>
 
       {/* --- CYBER OS BUTTON (FIXED) --- */}
-      <div className="fixed bottom-8 right-8 z-50">
-          <a href="/games" className="group flex items-center gap-3 px-5 py-3 bg-[#0a0f14]/90 backdrop-blur-xl border border-[#00f3ff]/30 rounded-2xl hover:scale-105 hover:border-[#00f3ff] transition-all shadow-2xl hover:shadow-[0_0_30px_rgba(0,243,255,0.3)]">
+        <div className="fixed bottom-8 right-8 z-50">
+          <Link to="/games" className="group flex items-center gap-3 px-5 py-3 bg-[#0a0f14]/90 backdrop-blur-xl border border-[#00f3ff]/30 rounded-2xl hover:scale-105 hover:border-[#00f3ff] transition-all shadow-2xl hover:shadow-[0_0_30px_rgba(0,243,255,0.3)]">
             <div className="relative">
                <Gamepad2 size={24} className="text-[#00f3ff] group-hover:animate-spin" />
                <span className="absolute top-0 right-0 w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
@@ -221,7 +222,7 @@ function App() {
               <div className="text-[10px] text-zinc-500 font-bold uppercase tracking-wider">System</div>
               <div className="text-sm font-bold text-white group-hover:text-[#00f3ff] transition-colors">CYBER OS</div>
             </div>
-          </a>
+            </Link>
       </div>
 
     </div>
