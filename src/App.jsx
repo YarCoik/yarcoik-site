@@ -1,18 +1,14 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-// Импортируем наши "картины" (страницы)
+// 👇 ТЫ СКОРЕЕ ВСЕГО ЗАБЫЛ ВОТ ЭТИ ДВЕ СТРОЧКИ 👇
 import Home from './pages/Home';
 import Games from './pages/Games';
 
 function App() {
   return (
-    // Routes - это место, где меняются страницы
     <Routes>
-      {/* Если адрес сайта "/", показываем Home */}
       <Route path="/" element={<Home />} />
-      
-      {/* Если адрес сайта "/games", показываем Games */}
       <Route path="/games" element={<Games />} />
     </Routes>
   );
