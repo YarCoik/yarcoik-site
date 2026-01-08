@@ -1,14 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import { BrowserRouter } from 'react-router-dom'
 import App from './App.jsx'
 import './index.css'
 
-// 1. ИМПОРТИРУЙ ЭТУ СТРОКУ
-import { BrowserRouter } from 'react-router-dom'
-
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    {/* 2. ОБЕРНИ APP В BROWSERROUTER */}
+    {/* Используем BrowserRouter для красивых ссылок без решетки */}
     <BrowserRouter>
       <App />
     </BrowserRouter>
